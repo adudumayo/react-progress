@@ -9,17 +9,13 @@ header {
 
 main {
     border: 10px solid red;
-    margin-top: 10px;
+    margin-top: 50px;
     height: 800px;
     display: flex;
 }
 
-#tools {
-    border: 5px dotted;
-    width: 30%;
-}
-
 #projects {
     border: 5px dotted blue;
-    width: 60%;
+    width: 90%;
+    margin-left: 5%;
 }
