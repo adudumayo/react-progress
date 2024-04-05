@@ -3,6 +3,23 @@ body {
 }
 
 header {
-    border: 2px solid;
+    border: 10px solid;
     text-align: center;
+}
+
+main {
+    border: 10px solid red;
+    margin-top: 10px;
+    height: 800px;
+    display: flex;
+}
+
+#tools {
+    border: 5px dotted;
+    width: 30%;
+}
+
+#projects {
+    border: 5px dotted blue;
+    width: 60%;
 }
