@@ -10,12 +10,18 @@ header {
 main {
     border: 10px solid red;
     margin-top: 50px;
-    height: 800px;
+    height: fit-content;
     display: flex;
 }
 
 #projects {
-    border: 5px dotted blue;
+    border: 8px dotted blue;
     width: 90%;
     margin-left: 5%;
+    height: fit-content;
+}
+
+.project {
+    border: 6px solid;
+    height: 40px;
 }
