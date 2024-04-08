@@ -11,9 +11,5 @@ const slogan = document.getElementById('slogan');
 const sloganSpace = ReactDOM.createRoot(slogan);
 sloganSpace.render(<h2>Slogan Goes Here</h2>);
 
-const newProjectButton = document.getElementById('buttons');
-const buttonsSpace = ReactDOM.createRoot(newProjectButton);
-buttonsSpace.render(<button id="addProject">New Project</button>);
-
-
-ReactDOM.render(<ProjectManager />, document.getElementById('projects'));
+const testing = ReactDOM.createRoot(document.getElementById('projects'));
+testing.render(<ProjectManager />);
