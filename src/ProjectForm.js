@@ -1,20 +1,25 @@
-import ProjectManager from "./ProjectManager";
+import { useState } from 'react';
 
 function ProjectForm() {
-    const clickableFunction = () => {
-        alert("I hope this works");
+    const [name, setName] = useState("");
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert(`The name you entered was: ${name}`)
     }
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>Enter your name:
                 <input
                     type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                 />
-                <button id="submit" onClick={clickableFunction}>submit</button>
             </label>
+            <input type="submit" />
         </form>
     )
-};
+}
 
 export default ProjectForm;

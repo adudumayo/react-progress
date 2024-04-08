@@ -12,8 +12,8 @@ const slogan = document.getElementById('slogan');
 const sloganSpace = ReactDOM.createRoot(slogan);
 sloganSpace.render(<h2>Slogan Goes Here</h2>);
 
-const trying = ReactDOM.createRoot(document.getElementById('formsSpace'));
-trying.render(<ProjectForm />);
+const projectsSpace = ReactDOM.createRoot(document.getElementById('projects'));
+projectsSpace.render(<ProjectManager />);
 
-const testing = ReactDOM.createRoot(document.getElementById('projects'));
-testing.render(<ProjectManager />);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<ProjectForm />);
