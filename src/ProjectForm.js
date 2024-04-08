@@ -1,15 +1,17 @@
+import ProjectManager from "./ProjectManager";
+
 function ProjectForm() {
-    //const [name, setName] = useState("");
+    const clickableFunction = () => {
+        alert("I hope this works");
+    }
 
     return (
         <form>
             <label>Enter your name:
                 <input
                     type="text"
-                    // value={name}
-                    // onChange={(e) => setName(e.target.value)}
                 />
-                <button type="button" id="submit">submit</button>
+                <button id="submit" onClick={clickableFunction}>submit</button>
             </label>
         </form>
     )
