@@ -7,6 +7,13 @@ header {
     text-align: center;
 }
 
+#buttons {
+    border: 10px solid;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 main {
     margin-top: 50px;
     height: fit-content;
@@ -20,7 +27,7 @@ main {
 }
 
 .project {
-    border: 6px solid; 
+    border: 6px hidden; 
     border-radius: 10px; 
     height: fit-content;
     background-color: black;
@@ -28,4 +35,29 @@ main {
     margin-bottom: 50px;
     font-size: xx-large;
     display: flex;
+}
+
+.projectName {
+    margin: 10px;
+    width: 20%;
+}
+
+.projectMgr {
+    margin: 10px;
+    width: 20%;
+}
+
+.numOfTasks {
+    margin: 10px;
+    width: 20%;
+}
+
+.projectStatus {
+    margin: 10px;
+    width: 20%;
+}
+
+.deadline {
+    margin: 10px;
+    width: 20%;
 }
