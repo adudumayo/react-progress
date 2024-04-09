@@ -1,75 +1,93 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 function TestButton() {
     const [showForm, setShowForm] = useState(false);
-    const [hideForm, setHideForm] = useState(false);
+    const [projectName, setProjectName] = useState('');
+    const [projectMgr, setProjectMgr] = useState('');
+    const [projectStatus, setProjectStatus] = useState('Not Started');
+    const [deadline, setDeadline] = useState('');
+    const [projects, setProjects] = useState([]);
 
-    const [projectName, setProjectName] = useState("");
-    const [projectMgr, setProjectMgr] = useState("");
-    const [projectStatus, setProjectStatus] = useState("Not Started");
-    const [deadline, setDeadline] = useState("");
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        // Create a new project object with the form data
+        const newProject = {
+            projectName,
+            projectMgr,
+            projectStatus,
+            deadline
+        };
+        // Add the new project to the projects array
+        setProjects([...projects, newProject]);
 
-    const formDisplayer = () => {
-        setShowForm(true);
-    }
-
-    const formHider = () => {
+        setProjectName('');
+        setProjectMgr('');
+        setProjectStatus('Not Started');
+        setDeadline('');
         setShowForm(false);
-        setHideForm(true)
-    }
+    };
 
     return (
         <div id="buttons">
-            <button id="testButton" onClick={formDisplayer}>Add Project</button>
+            <button id="testButton" onClick={() => setShowForm(true)}>Add Project</button>
 
-            {showForm && (<form onSubmit={formHider}>
-                <label>Project Name:
-                    <input
-                        type="text"
-                        value={projectName}
-                        onChange={(e) => setProjectName(e.target.value)}
-                    />
-                </label>
-                <br></br>
-                <label>Project Manager:
-                    <input
-                        type="text"
-                        value={projectMgr}
-                        onChange={(e) => setProjectMgr(e.target.value)}
-                    />
-                </label>
-                <br></br>
-                <label>Enter proj status:
-                    <input
-                        type="text"
-                        value={projectStatus}
-                        onChange={(e) => setProjectStatus(e.target.value)}
-                    />
-                </label>
-                <br></br>
-                <label>Due Date:
-                    <input
-                        type="text"
-                        value={deadline}
-                        onChange={(e) => setDeadline(e.target.value)}
-                    />
-                </label>
-                <input type="submit" />
-            </form>)
-            }
+            {showForm && (
+                <form onSubmit={handleFormSubmit}>
+                    <label>
+                        Project Name:
+                        <input
+                            type="text"
+                            value={projectName}
+                            onChange={(e) => setProjectName(e.target.value)}
+                        />
+                    </label>
+                    <br />
+                    <label>
+                        Project Manager:
+                        <input
+                            type="text"
+                            value={projectMgr}
+                            onChange={(e) => setProjectMgr(e.target.value)}
+                        />
+                    </label>
+                    <br />
+                    <label>
+                        Project Status:
+                        <input
+                            type="text"
+                            value={projectStatus}
+                            onChange={(e) => setProjectStatus(e.target.value)}
+                        />
+                    </label>
+                    <br />
+                    <label>
+                        Due Date:
+                        <input
+                            type="text"
+                            value={deadline}
+                            onChange={(e) => setDeadline(e.target.value)}
+                        />
+                    </label>
+                    <br />
+                    <button type="submit">Submit</button>
+                </form>
+            )}
 
-            {hideForm && (
-                <div id='projects'>
-                    <div className="project">
-                        <div className="projectName">{projectName}</div>
-                        <div className="projectMgr">{projectMgr}</div>
-                        <div className="projectStatus">{projectStatus}</div>
-                        <div className="deadline">{deadline}</div>
-                    </div>
+            {projects.length > 0 && (
+                <div id="projects">
+                    <h2>Projects:</h2>
+                    {projects.map((project, index) => (
+                        <div key={index} className="project">
+                            <div className="projectName">{project.projectName}</div>
+                            <div className="projectMgr">{project.projectMgr}</div>
+                            <div className="projectStatus">{project.projectStatus}</div>
+                            <div className="deadline">{project.deadline}</div>
+                        </div>
+                    ))}
                 </div>
             )}
         </div>
-    )
+    );
 }
 
 export default TestButton;
