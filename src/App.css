@@ -14,6 +14,10 @@ main {
     flex-direction: column;
 }
 
+form {
+    font-size: xx-large;
+}
+
 #projects {
     width: 90%;
     margin-left: 5%;

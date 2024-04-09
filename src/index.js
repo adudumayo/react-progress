@@ -18,6 +18,3 @@ testingSpace.render(<TestButton />)
 
 // const projectsSpace = ReactDOM.createRoot(document.getElementById('projects'));
 // projectsSpace.render(<ProjectManager />);
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<ProjectForm />);
