@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './App.css';
-import TestButton from './TestButton';
+import TestButton from './AddProject';
 
 const logo = <h1>Task Arena</h1>
 const logoSpace = ReactDOM.createRoot(document.getElementById('logo'));

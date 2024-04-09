@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function TestButton() {
+function AddProject() {
     const [showForm, setShowForm] = useState(false);
     const [projectName, setProjectName] = useState('');
     const [projectMgr, setProjectMgr] = useState('');
@@ -90,4 +90,4 @@ function TestButton() {
     );
 }
 
-export default TestButton;
+export default AddProject;
