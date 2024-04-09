@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-
 function TestButton() {
     const [showForm, setShowForm] = useState(false);
 
@@ -8,7 +7,7 @@ function TestButton() {
         setShowForm(true);
     }
 
-    const formHider = (event) => {
+    const formHider = () => {
         setShowForm(false);
     }
 
@@ -22,8 +21,8 @@ function TestButton() {
                         <input type='text'></input>
                     </label>
                 </form>)
-            } <br></br><br></br>
-            <button id='hideTestButton' onClick={formHider}>
+            } <br></br>
+            <button type='submit' id='hideTestButton' onClick={formHider}>
                 THIS SHOULD HIDE THE FORM
             </button>
         </div>
