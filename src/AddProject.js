@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function AddProject() {
     const [showForm, setShowForm] = useState(false);
+    const [showFirstAddButton, setShowFirstAddButton] = useState(true);
     const [projectName, setProjectName] = useState('');
     const [projectMgr, setProjectMgr] = useState('');
     const [projectStatus, setProjectStatus] = useState('Not Started');
@@ -29,7 +30,7 @@ function AddProject() {
 
     return (
         <div id="buttons">
-            <button id="testButton" onClick={() => setShowForm(true)}>Add Project</button>
+            {showFirstAddButton && (<button id="testButton" onClick={() => { setShowForm(true); setShowFirstAddButton(false);}}>Add Project</button>)}
 
             {showForm && (
                 <form onSubmit={handleFormSubmit}>
@@ -39,6 +40,7 @@ function AddProject() {
                             type="text"
                             value={projectName}
                             onChange={(e) => setProjectName(e.target.value)}
+                            required
                         />
                     </label>
                     <br />
@@ -48,6 +50,7 @@ function AddProject() {
                             type="text"
                             value={projectMgr}
                             onChange={(e) => setProjectMgr(e.target.value)}
+                            required
                         />
                     </label>
                     <br />
@@ -57,6 +60,7 @@ function AddProject() {
                             type="text"
                             value={projectStatus}
                             onChange={(e) => setProjectStatus(e.target.value)}
+                            required
                         />
                     </label>
                     <br />
@@ -66,10 +70,11 @@ function AddProject() {
                             type="text"
                             value={deadline}
                             onChange={(e) => setDeadline(e.target.value)}
+                            required
                         />
                     </label>
                     <br />
-                    <button type="submit">Add Project</button>
+                    <button type="submit" onClick={() => {setShowFirstAddButton(true)}}>Add Project</button>
                 </form>
             )}
 
