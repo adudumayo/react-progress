@@ -24,7 +24,7 @@ function AddProject() {
         setProjectName('');
         setProjectMgr('');
         setProjectStatus('Not Started');
-        setDeadline('');
+        setDeadline('TBC');
         setShowForm(false);
     };
 
