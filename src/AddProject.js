@@ -79,17 +79,30 @@ function AddProject() {
             )}
 
             {projects.length > 0 && (
-                <div id="projects">
+                <div id="projects" className="project-list">
                     <h2>Projects:</h2>
                     {projects.map((project, index) => (
-                        <div key={index} className="project">
-                            <div className="projectName">{project.projectName}</div>
-                            <div className="projectMgr">{project.projectMgr}</div>
-                            <div className="projectStatus">{project.projectStatus}</div>
-                            <div className="deadline">{project.deadline}</div>
+                        <div key={index} className="project-card">
+                            <div className="project-detail">
+                                <span className="detail-label">Project Name:</span>
+                                <span className="detail-value">{project.projectName}</span>
+                            </div>
+                            <div className="project-detail">
+                                <span className="detail-label">Project Manager:</span>
+                                <span className="detail-value">{project.projectMgr}</span>
+                            </div>
+                            <div className="project-detail">
+                                <span className="detail-label">Project Status:</span>
+                                <span className="detail-value">{project.projectStatus}</span>
+                            </div>
+                            <div className="project-detail">
+                                <span className="detail-label">Due Date:</span>
+                                <span className="detail-value">{project.deadline}</span>
+                            </div>
                         </div>
                     ))}
                 </div>
+
             )}
         </div>
     );

@@ -29,26 +29,10 @@ form {
     font-size: xx-large;
 }
 
-#projects {
+ #projects {
     width: 90%;
     margin-left: 5%;
     height: fit-content;
-}
-
-.project {
-    border: 6px hidden; 
-    border-radius: 10px; 
-    height: fit-content;
-    background-color: black;
-    color: #ffffff;
-    margin-bottom: 50px;
-    font-size: xx-large;
-    display: flex;
-}
-
-.projectName, .deadline, .projectMgr, .projectStatus, .numOfTasks {
-    margin: 10px;
-    width: 20%;
 }
 
 .project-form {
@@ -90,4 +74,38 @@ button.add-button {
 
 button.add-button:hover {
     background-color: rgb(11, 11, 11);
+}
+
+/* CSS for Project List */
+
+.project-list {
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.project-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #333333;
+}
+
+.detail-value {
+    color: #555555;
+}
+
+.project-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
