@@ -33,48 +33,48 @@ function AddProject() {
             {showFirstAddButton && (<button id="testButton" onClick={() => { setShowForm(true); setShowFirstAddButton(false);}}>Add Project</button>)}
 
             {showForm && (
-                <form onSubmit={handleFormSubmit}>
-                    <label>
-                        Project Name:
+                <form onSubmit={handleFormSubmit} className="project-form">
+                    <div className="form-group">
+                        <label htmlFor="projectName">Project Name:</label>
                         <input
                             type="text"
+                            id="projectName"
                             value={projectName}
                             onChange={(e) => setProjectName(e.target.value)}
                             required
                         />
-                    </label>
-                    <br />
-                    <label>
-                        Project Manager:
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="projectMgr">Project Manager:</label>
                         <input
                             type="text"
+                            id="projectMgr"
                             value={projectMgr}
                             onChange={(e) => setProjectMgr(e.target.value)}
                             required
                         />
-                    </label>
-                    <br />
-                    <label>
-                        Project Status:
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="projectStatus">Project Status:</label>
                         <input
                             type="text"
+                            id="projectStatus"
                             value={projectStatus}
                             onChange={(e) => setProjectStatus(e.target.value)}
                             required
                         />
-                    </label>
-                    <br />
-                    <label>
-                        Due Date:
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="deadline">Due Date:</label>
                         <input
                             type="text"
+                            id="deadline"
                             value={deadline}
                             onChange={(e) => setDeadline(e.target.value)}
                             required
                         />
-                    </label>
-                    <br />
-                    <button type="submit" onClick={() => {setShowFirstAddButton(true)}}>Add Project</button>
+                    </div>
+                    <button type="submit" className="add-button">Add Project</button>
                 </form>
             )}
 
