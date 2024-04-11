@@ -3,7 +3,6 @@ body {
 }
 
 header {
-    border: 10px solid;
     text-align: center;
 }
 
@@ -12,6 +11,16 @@ main {
     height: fit-content;
     display: flex;
     flex-direction: column;
+}
+
+#primaryAddProject {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 form {
@@ -45,7 +54,7 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -60,7 +69,7 @@ label {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 95%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;

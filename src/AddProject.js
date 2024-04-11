@@ -30,7 +30,7 @@ function AddProject() {
 
     return (
         <div id="buttons">
-            {showFirstAddButton && (<button id="testButton" onClick={() => { setShowForm(true); setShowFirstAddButton(false);}}>Add Project</button>)}
+            {showFirstAddButton && (<button id="primaryAddProject" onClick={() => { setShowForm(true); setShowFirstAddButton(false);}}>Add Project</button>)}
 
             {showForm && (
                 <form onSubmit={handleFormSubmit} className="project-form">
@@ -74,7 +74,7 @@ function AddProject() {
                             required
                         />
                     </div>
-                    <button type="submit" className="add-button">Add Project</button>
+                    <button type="submit" className="add-button" onClick={() => { setShowFirstAddButton(true) }}>Add Project</button>
                 </form>
             )}
 
