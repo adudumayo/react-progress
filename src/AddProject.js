@@ -6,7 +6,7 @@ function AddProject() {
     const [projectName, setProjectName] = useState('');
     const [projectMgr, setProjectMgr] = useState('');
     const [projectStatus, setProjectStatus] = useState('Not Started');
-    const [deadline, setDeadline] = useState('');
+    const [deadline, setDeadline] = useState('TBC');
     const [projects, setProjects] = useState([]);
 
     const handleFormSubmit = (e) => {
@@ -24,7 +24,7 @@ function AddProject() {
         setProjectName('');
         setProjectMgr('');
         setProjectStatus('Not Started');
-        setDeadline('TBC');
+        setDeadline('');
         setShowForm(false);
     };
 
