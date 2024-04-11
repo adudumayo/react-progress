@@ -69,7 +69,7 @@ function AddProject() {
                         />
                     </label>
                     <br />
-                    <button type="submit">Submit</button>
+                    <button type="submit">Add Project</button>
                 </form>
             )}
 
