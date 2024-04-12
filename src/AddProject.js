@@ -3,26 +3,22 @@ import React, { useState } from 'react';
 function AddProject() {
     const [showForm, setShowForm] = useState(false);
     const [showFirstAddButton, setShowFirstAddButton] = useState(true);
-    const [projectName, setProjectName] = useState('');
-    const [projectMgr, setProjectMgr] = useState('');
+    const [projectName, setProjectName] = useState('Placeholder');
+    const [projectMgr, setProjectMgr] = useState('Placeholder');
     const [projectStatus, setProjectStatus] = useState('Not Started');
     const [deadline, setDeadline] = useState('TBC');
     const [projects, setProjects] = useState([]);
+    
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        // Create a new project object with the form data
-        const newProject = {
-            projectName,
-            projectMgr,
-            projectStatus,
-            deadline
-        };
-        // Add the new project to the projects array
+        
+        const newProject = { projectName, projectMgr, projectStatus, deadline };
+        
         setProjects([...projects, newProject]);
 
-        setProjectName('');
-        setProjectMgr('');
+        setProjectName('Placeholder');
+        setProjectMgr('Placeholder');
         setProjectStatus('Not Started');
         setDeadline('TBC');
         setShowForm(false);
